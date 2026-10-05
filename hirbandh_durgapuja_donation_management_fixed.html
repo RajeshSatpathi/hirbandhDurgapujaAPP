@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="হিড়বাঁধ দুর্গাপূজা — ঐতিহ্য, সংস্কৃতি, মিলন ও সেবার এক সুন্দর উৎসব।" />
+  <title>হিড়বাঁধ দুর্গাপূজা | ঐতিহ্য • সংস্কৃতি • মিলন</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --red:#9e1b32;
+      --deep:#5e1020;
+      --gold:#d89b35;
+      --cream:#fff8ed;
+      --paper:#fffdf8;
+      --text:#3f2b24;
+      --muted:#75645c;
+      --green:#315c42;
+      --shadow:0 18px 50px rgba(74,30,18,.13);
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Hind Siliguri",sans-serif;
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.75;
+      overflow-x:hidden;
+    }
+    h1,h2,h3,.logo{font-family:"Noto Serif Bengali",serif}
+    a{text-decoration:none;color:inherit}
+    img{display:block;width:100%;object-fit:cover}
+
+    .topbar{
+      background:var(--deep);
+      color:#ffe8b0;
+      text-align:center;
+      padding:7px 15px;
+      font-size:14px;
+      letter-spacing:.3px;
+    }
+
+    header{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(255,253,248,.94);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(158,27,50,.12);
+    }
+    .nav{
+      max-width:1180px;margin:auto;
+      min-height:76px;padding:0 20px;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{
+      width:48px;height:48px;border-radius:50%;
+      display:grid;place-items:center;
+      background:radial-gradient(circle,#ffd778 0 18%,#d89b35 19% 42%,#9e1b32 43%);
+      color:white;font-size:24px;
+      box-shadow:0 5px 18px rgba(158,27,50,.25);
+    }
+    .logo{font-size:21px;font-weight:800;color:var(--deep)}
+    .logo small{display:block;font:600 11px "Hind Siliguri";color:var(--muted);letter-spacing:1px}
+    nav ul{display:flex;gap:22px;list-style:none}
+    nav a{font-weight:600;color:#513a32;font-size:15px;transition:.25s}
+    nav a:hover{color:var(--red)}
+    .menu-btn{display:none;border:0;background:transparent;font-size:27px;color:var(--deep);cursor:pointer}
+
+    .hero{
+      min-height:720px;
+      display:grid;place-items:center;
+      position:relative;
+      color:white;
+      background:
+        linear-gradient(90deg,rgba(45,7,14,.78),rgba(96,16,29,.38),rgba(40,9,11,.28)),
+        url("https://images.unsplash.com/photo-1603396343935-6c5a2a4f1c3d?auto=format&fit=crop&w=2000&q=88") center/cover;
+    }
+    .hero::after{
+      content:"";position:absolute;inset:auto 0 0;height:120px;
+      background:linear-gradient(transparent,var(--cream));
+    }
+    .hero-content{max-width:1000px;padding:90px 22px 130px;text-align:center;position:relative;z-index:2}
+    .eyebrow{
+      display:inline-block;padding:7px 17px;border:1px solid rgba(255,220,143,.7);
+      border-radius:999px;color:#ffe4a1;background:rgba(0,0,0,.18);margin-bottom:18px;
+    }
+    .hero h1{font-size:clamp(42px,7vw,82px);line-height:1.12;text-shadow:0 8px 30px rgba(0,0,0,.35)}
+    .hero h1 span{color:#ffd878}
+    .hero p{font-size:clamp(17px,2vw,21px);max-width:750px;margin:22px auto 30px;color:#fff5e5}
+    .buttons{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 22px;border-radius:999px;font-weight:700;transition:.25s;border:1px solid transparent;
+      cursor:pointer;font-family:inherit;
+    }
+    .btn-primary{background:var(--gold);color:#40120c;box-shadow:0 9px 25px rgba(216,155,53,.25)}
+    .btn-primary:hover{transform:translateY(-2px);background:#efb54a}
+    .btn-light{border-color:#fff;background:rgba(255,255,255,.08);color:#fff}
+    .btn-light:hover{background:#fff;color:var(--deep)}
+
+    section{padding:85px 20px}
+    .container{max-width:1180px;margin:auto}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+    .kicker{color:var(--red);font-weight:800;letter-spacing:1.5px;font-size:13px}
+    .section-head h2{font-size:clamp(30px,4vw,44px);color:var(--deep);margin:7px 0 10px}
+    .section-head p{color:var(--muted)}
+
+    .about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:45px;align-items:center}
+    .about-img{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+    .about-img img{height:470px}
+    .about-badge{
+      position:absolute;bottom:18px;left:18px;right:18px;
+      padding:15px 18px;border-radius:17px;background:rgba(255,253,248,.93);
+      color:var(--deep);font-weight:700;box-shadow:0 8px 30px rgba(0,0,0,.12)
+    }
+    .about-copy p{margin:0 0 15px;color:var(--muted)}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:25px}
+    .fact{padding:17px;border-radius:18px;background:#fff;border:1px solid #f0e2d4;text-align:center}
+    .fact strong{display:block;font:800 28px "Noto Serif Bengali";color:var(--red)}
+    .fact span{font-size:13px;color:var(--muted)}
+
+    .program-section{background:#fff}
+    .programs{display:grid;grid-template-columns:repeat(1);gap:20px}
+    .program{
+      padding:25px;border-radius:23px;background:var(--paper);border:1px solid #f0dfca;
+      box-shadow:0 10px 28px rgba(74,30,18,.06);transition:.3s;
+    }
+    .program:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+    .program-icon{font-size:32px;margin-bottom:10px}
+    .program h3{color:var(--deep);font-size:22px}
+    .program p{color:var(--muted);margin:6px 0 12px}
+    .time{font-size:13px;color:var(--red);font-weight:700}
+
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px}
+    .gallery-item{overflow:hidden;border-radius:18px;cursor:pointer;position:relative}
+    .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+    .gallery-item img{height:100%;transition:.5s}
+    .gallery-item::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.55));opacity:0;transition:.3s}
+    .gallery-item:hover img{transform:scale(1.08)}
+    .gallery-item:hover::after{opacity:1}
+
+    .donation{
+      background:
+        radial-gradient(circle at 10% 10%,rgba(255,211,121,.2),transparent 30%),
+        linear-gradient(135deg,#681224,#9e1b32);
+      color:#fff;
+    }
+    .donation-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+    .donation h2{font-size:42px;color:#ffe0a0}
+    .donation p{color:#f9e7d6;margin:10px 0 18px}
+    .donation-list{list-style:none;display:grid;gap:10px;margin:20px 0}
+    .donation-list li::before{content:"✓";color:#ffd878;font-weight:800;margin-right:9px}
+    .donation-card{background:#fff;color:var(--text);border-radius:26px;padding:28px;box-shadow:0 20px 60px rgba(30,0,0,.25)}
+    .donation-card h3{font-size:25px;color:var(--deep)}
+    .upi-box{background:#fff8ed;border:1px dashed #d3ae76;border-radius:17px;padding:17px;margin:17px 0}
+    .upi-id{font-weight:800;color:var(--red);font-size:20px;word-break:break-all}
+    .copy-btn{width:100%;border:0;background:var(--deep);color:#fff;padding:12px;border-radius:12px;font:700 15px "Hind Siliguri";cursor:pointer}
+    .note{font-size:12px;color:#817068;margin-top:10px}
+
+    .committee{background:#fff}
+    .members{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .member{text-align:center;padding:25px 15px;background:var(--cream);border:1px solid #f0dfca;border-radius:22px}
+    .avatar{width:82px;height:82px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#ffd978,#a71d36);color:#fff;font:800 28px "Noto Serif Bengali";border:4px solid #fff;box-shadow:0 7px 20px rgba(90,20,20,.16)}
+    .member h3{font-size:20px;color:var(--deep)}
+    .member p{font-size:13px;color:var(--muted)}
+
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}
+    .contact-card,.form-card{background:#fff;border:1px solid #efdfcf;border-radius:25px;padding:28px;box-shadow:0 10px 30px rgba(74,30,18,.06)}
+    .contact-item{display:flex;gap:14px;margin:20px 0}
+    .contact-icon{min-width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#f8e7d7;color:var(--red);font-size:20px}
+    .contact-item h3{font-size:17px;color:var(--deep)}
+    .contact-item p{font-size:14px;color:var(--muted)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    label{font-size:13px;font-weight:700;color:#5c463e}
+    input,textarea{
+      width:100%;margin-top:6px;border:1px solid #e7d6c6;background:#fffdf9;
+      border-radius:12px;padding:12px 13px;font:15px "Hind Siliguri";outline:none;
+    }
+    input:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(216,155,53,.12)}
+    textarea{min-height:130px;resize:vertical}
+    .full{grid-column:1/-1}
+    .submit{border:0;background:var(--red);color:#fff;width:100%;padding:13px;border-radius:12px;font:700 16px "Hind Siliguri";cursor:pointer}
+    .submit:hover{background:var(--deep)}
+
+    footer{background:#3b111b;color:#eadbd0;padding:38px 20px 20px}
+    .footer-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:30px}
+    footer h3{color:#ffd77c;font-size:22px}
+    footer p,footer a{color:#cdbbb2;font-size:14px}
+    footer ul{list-style:none;display:grid;gap:5px;margin-top:8px}
+    .copyright{max-width:1180px;margin:28px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);text-align:center;font-size:12px;color:#aa9289}
+
+    .toast{
+      position:fixed;right:20px;bottom:20px;background:#231017;color:#fff;
+      padding:12px 17px;border-radius:12px;opacity:0;transform:translateY(15px);pointer-events:none;transition:.3s;z-index:3000
+    }
+    .toast.show{opacity:1;transform:translateY(0)}
+
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;place-items:center;z-index:2000;padding:20px}
+    .modal.open{display:grid}
+    .modal img{max-width:900px;max-height:82vh;border-radius:15px}
+    .modal button{position:absolute;right:25px;top:18px;border:0;background:#fff;border-radius:50%;width:44px;height:44px;font-size:24px;cursor:pointer}
+
+    @media(max-width:900px){
+      nav ul{gap:12px}
+      .about-grid,.donation-grid,.contact-grid{grid-template-columns:1fr}
+      .programs{grid-template-columns:1fr 1fr}
+      .members{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:700px){
+      .menu-btn{display:block}
+      nav ul{
+        display:none;position:absolute;left:15px;right:15px;top:69px;
+        background:#fffdf8;padding:16px;border-radius:17px;box-shadow:var(--shadow);
+        flex-direction:column;
+      }
+      nav ul.active{display:flex}
+      .hero{min-height:650px}
+      .hero-content{padding-top:70px}
+      .programs,.members,.facts,.form-grid,.footer-grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:145px}
+      .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+      section{padding:65px 16px}
+      .donation h2{font-size:33px}
+    }
+
+    /* Donation Management */
+    .donation-management{background:#fffaf3}
+    .donation-manager-card{background:#fff;border:1px solid #efdfcf;border-radius:26px;padding:28px;box-shadow:var(--shadow)}
+    .donation-form{display:grid;grid-template-columns:1.3fr .8fr .9fr 1fr auto;gap:12px;align-items:end}
+    .donation-form label{display:block}
+    .donation-form input,.donation-form select{height:46px}
+    .donation-form select{
+      width:100%;margin-top:6px;border:1px solid #e7d6c6;background:#fffdf9;
+      border-radius:12px;padding:0 13px;font:15px "Hind Siliguri";outline:none;
+    }
+    .donation-form select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(216,155,53,.12)}
+    .donation-submit{height:46px;border:0;background:var(--red);color:#fff;padding:0 20px;border-radius:12px;font:700 15px "Hind Siliguri";cursor:pointer;white-space:nowrap}
+    .donation-submit:hover{background:var(--deep)}
+    .donation-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+    .donation-stat{padding:18px;border-radius:18px;background:var(--cream);border:1px solid #f0dfca}
+    .donation-stat strong{display:block;font:800 28px "Noto Serif Bengali";color:var(--red)}
+    .donation-stat span{font-size:13px;color:var(--muted)}
+    .donation-table-wrap{overflow:auto;border:1px solid #eadbcc;border-radius:18px}
+    .donation-table{width:100%;border-collapse:collapse;min-width:720px;background:#fff}
+    .donation-table th{background:var(--deep);color:#ffe9b1;padding:13px 12px;text-align:left;font-size:14px;white-space:nowrap}
+    .donation-table td{padding:12px;border-bottom:1px solid #f0e5da;color:#58443c;font-size:14px}
+    .donation-table tbody tr:hover{background:#fffaf3}
+    .method-badge{display:inline-block;padding:4px 9px;border-radius:999px;font-size:12px;font-weight:700}
+    .method-upi{background:#e9f5ed;color:#28623e}
+    .method-cash{background:#fff1dc;color:#8a5512}
+    .action-btn{border:0;border-radius:8px;padding:6px 9px;cursor:pointer;font-family:inherit;font-weight:700;margin-right:4px}
+    .edit-btn{background:#fff0d1;color:#80520c}
+    .delete-btn{background:#fbe4e4;color:#9e1b32}
+    .donation-toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:20px 0 14px;flex-wrap:wrap}
+    .donation-toolbar .toolbar-actions{display:flex;gap:9px;flex-wrap:wrap}
+    .toolbar-btn{border:1px solid #decdbb;background:#fff8ed;color:var(--deep);padding:10px 14px;border-radius:11px;font:700 14px "Hind Siliguri";cursor:pointer}
+    .toolbar-btn:hover{background:#f7eadb}
+    .toolbar-btn.pdf{background:var(--deep);color:#fff;border-color:var(--deep)}
+    .toolbar-btn.danger{color:#9e1b32;border-color:#e5bcbc}
+    .donation-note{font-size:13px;color:var(--muted);margin-top:12px}
+    .empty-donations{text-align:center;padding:32px;color:var(--muted)}
+    .donation-total-row td{font-weight:800;background:#fff8ed;color:var(--deep)}
+    .editing-label{display:none;color:var(--red);font-size:13px;font-weight:800;margin:0 0 10px}
+    .editing .editing-label{display:block}
+    .cancel-edit{display:none}
+    .editing .cancel-edit{display:inline-block}
+    @media(max-width:1000px){.donation-form{grid-template-columns:1fr 1fr 1fr}.donation-submit{grid-column:1/-1}.donation-form .cancel-edit{grid-column:auto}}
+    @media(max-width:700px){.donation-form{grid-template-columns:1fr}.donation-stats{grid-template-columns:1fr}.donation-manager-card{padding:18px}}
+
+  </style>
+</head>
+
+<body>
+  <div class="topbar">🌺 শারদীয়ার শুভেচ্ছা • হিড়বাঁধ দুর্গাপূজা কমিটি • ঐতিহ্য ও সংস্কৃতির বন্ধন</div>
+
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home">
+        <div class="brand-mark">ॐ</div>
+        <div class="logo">হিড়বাঁধ দুর্গাপূজা<small>HIRBANDH DURGAPUJA</small></div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="মেনু">☰</button>
+
+      <nav>
+        <ul id="navList">
+          <li><a href="#home">হোম</a></li>
+          <li><a href="#about">ইতিহাস</a></li>
+          <li><a href="#program">অনুষ্ঠান</a></li>
+          <li><a href="#gallery">গ্যালারি</a></li>
+          <li><a href="#donate">অনুদান</a></li>
+          <li><a href="#donationManager">অনুদান হিসাব</a></li>
+          <li><a href="#committee">কমিটি</a></li>
+          <li><a href="#contact">যোগাযোগ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">🪔 শুভ শারদীয়া</div>
+        <h1>হিড়বাঁধ  মহান্তি ষোলআনা     <span> সার্বজনীন দুর্গোৎসব</span></h1>
+        <p>ভক্তি, ঐতিহ্য, সংস্কৃতি ও মানুষের ভালোবাসায় গড়ে ওঠা আমাদের প্রিয় দুর্গাপূজা। আসুন, সবাই মিলে উৎসবকে আরও সুন্দর করে তুলি।</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#program">অনুষ্ঠান দেখুন ↓</a>
+          <a class="btn btn-light" href="#donate">সংস্কৃতি অনুষ্ঠানে সহায়তা করুন</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">আমাদের কথা</div>
+          <h2>হিড়বাঁধ দুর্গাপূজার ইতিহাস</h2>
+          <p>প্রজন্ম থেকে প্রজন্মে বহমান আমাদের পূজার স্মৃতি, মানুষের মিলন এবং সাংস্কৃতিক ঐতিহ্য।</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-img">
+            <img src="historyimg.jpg" alt="দুর্গাপূজার প্রতীকী ছবি">
+            <div class="about-badge">🌸 “উৎসব তখনই পূর্ণ হয়, যখন আনন্দ সবার সঙ্গে ভাগ করে নেওয়া যায়।”</div>
+          </div>
+
+          <div class="about-copy">
+            <p>হিড়বাঁধ দুর্গাপূজা শুধু একটি ধর্মীয় অনুষ্ঠান নয়—এটি এলাকার মানুষের মিলন, স্মৃতি, সংস্কৃতি এবং সামাজিক সম্প্রীতির এক প্রাণের উৎসব। বছরের এই কয়েকটি দিন নতুন প্রজন্ম ও প্রবীণদের একসঙ্গে নিয়ে আসে।</p>
+            <p>পুজোর পাশাপাশি সাংস্কৃতিক অনুষ্ঠান, স্থানীয় প্রতিভার পরিবেশনা, শিশু-কিশোরদের অংশগ্রহণ এবং সামাজিক উদ্যোগ আমাদের উৎসবকে আরও প্রাণবন্ত করে তোলে।</p>
+            <p><strong>নোট:</strong> এখানে পূজার প্রকৃত প্রতিষ্ঠাবর্ষ, বিশেষ ঐতিহাসিক ঘটনা ও কমিটির তথ্য আপনার এলাকার তথ্য অনুযায়ী বসিয়ে দিন।</p>
+
+            <div class="facts">
+              <div class="fact"><strong>শারদ</strong><span>ঐতিহ্যের উৎসব</span></div>
+              <div class="fact"><strong>একতা</strong><span>সবার মিলন</span></div>
+              <div class="fact"><strong>সংস্কৃতি</strong><span>প্রতিভার মঞ্চ</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section" id="program">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">উৎসবের আয়োজন</div>
+          <h2>সাংস্কৃতিক অনুষ্ঠান</h2>
+          <p>পুজোর আনন্দের সঙ্গে থাকছে গান, নাচ, আবৃত্তি, নাটক ও স্থানীয় শিল্পীদের বিশেষ পরিবেশনা।</p>
+        </div>
+
+        <div class="programs">
+    
+          <article class="program">
+            <div class="program-icon">
+              <img src="programmlist.png" alt="">
+            </div>
+       
+          </article>
+      
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">স্মৃতির পাতায়</div>
+          <h2>গ্যালারি</h2>
+          <p>পুজোর মুহূর্ত, সাজসজ্জা ও মানুষের আনন্দের কিছু ঝলক। ছবিতে ক্লিক করে বড় করে দেখুন।</p>
+        </div>
+
+        <div class="gallery">
+          <div class="gallery-item"><img src="g4.jpg" alt="দুর্গাপূজা"></div>
+          <div class="gallery-item"><img src="g1.jpeg" alt="দুর্গাপূজা"></div>
+          <div class="gallery-item"><img src="g2.jpeg" alt="দুর্গাপূজা"></div>
+          <div class="gallery-item"><img src="g3.jpeg" alt="দুর্গাপূজা"></div>
+          <div class="gallery-item"><img src="gbig.jpg" alt="দুর্গাপূজা"></div>
+          <div class="gallery-item"><img src="g5.jpg" alt="দুর্গাপূজা"></div>
+        
+        </div>
+      </div>
+    </section>
+
+    <section class="donation" id="donate">
+      <div class="container donation-grid">
+        <div>
+          <div class="kicker" style="color:#ffd878">আপনার সহযোগিতা</div>
+          <h2>সংস্কৃতির মঞ্চকে বাঁচিয়ে রাখুন ❤️</h2>
+          <p>সাংস্কৃতিক অনুষ্ঠান, শিশুদের প্রতিযোগিতা, শিল্পীদের সম্মাননা ও উৎসবের বিভিন্ন আয়োজন পরিচালনায় আপনার সামান্য সহযোগিতাও মূল্যবান।</p>
+          <ul class="donation-list">
+            <li>সাংস্কৃতিক শিল্পীদের সহযোগিতা</li>
+            <li>শিশু-কিশোরদের অনুষ্ঠান ও পুরস্কার</li>
+            <li>মঞ্চ, আলো ও সাউন্ডের আয়োজন</li>
+            <li>সামাজিক ও সাংস্কৃতিক উদ্যোগ</li>
+          </ul>
+          <p><strong>স্বচ্ছতা:</strong> সংগৃহীত অনুদানের হিসাব কমিটির পক্ষ থেকে প্রকাশ করা যেতে পারে।</p>
+        </div>
+
+        <div class="donation-card">
+          <h3>অনুদান দিন</h3>
+          <p>নিচের UPI ID-তে আপনার সহযোগিতা পাঠাতে পারেন।</p>
+          <div class="upi-box">
+            <small>UPI ID</small>
+            <div class="upi-id" id="upi">hirbandhpuja@upi</div>
+          </div>
+          <button class="copy-btn" id="copyUpi">📋 UPI ID কপি করুন</button>
+          <p class="note">⚠️ এটি একটি ডেমো UPI ID। প্রকৃত UPI ID/QR Code এখানে বসিয়ে দিন।</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="donation-management" id="donationManager">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Donation Management</div>
+          <h2>অনুদান সংগ্রহের হিসাব</h2>
+          <p>দাতা, পরিমাণ, UPI/Cash এবং তারিখ-সময়সহ প্রতিটি অনুদান সংরক্ষণ ও মোট সংগ্রহের রিপোর্ট তৈরি করুন।</p>
+        </div>
+
+        <div class="donation-manager-card" id="donationManagerCard">
+          <div class="editing-label" id="editingLabel">✏️ অনুদানের তথ্য সম্পাদনা করা হচ্ছে</div>
+
+          <form id="donationForm" class="donation-form">
+            <label>দাতার নাম
+              <input id="donorName" type="text" required maxlength="80" placeholder="দাতার নাম লিখুন">
+            </label>
+            <label>পরিমাণ (₹)
+              <input id="donationAmount" type="number" required min="1" step="0.01" placeholder="যেমন 500">
+            </label>
+            <label>পেমেন্ট মাধ্যম
+              <select id="paymentMethod" required>
+                <option value="UPI">UPI</option>
+                <option value="Cash">Cash</option>
+              </select>
+            </label>
+            <label>তারিখ ও সময়
+              <input id="donationDateTime" type="datetime-local" required>
+            </label>
+            <button class="donation-submit" id="donationSubmit" type="submit">➕ অনুদান যোগ করুন</button>
+            <button class="toolbar-btn cancel-edit" id="cancelEdit" type="button">বাতিল</button>
+          </form>
+
+          <div class="donation-stats">
+            <div class="donation-stat"><strong id="totalCollection">₹0.00</strong><span>মোট সংগ্রহ</span></div>
+            <div class="donation-stat"><strong id="totalDonations">0</strong><span>মোট অনুদান</span></div>
+            <div class="donation-stat"><strong id="upiCollection">₹0.00</strong><span>UPI সংগ্রহ</span></div>
+            <div class="donation-stat"><strong id="cashCollection">₹0.00</strong><span>Cash সংগ্রহ</span></div>
+          </div>
+
+          <div class="donation-toolbar">
+            <div>
+              <strong>অনুদানের তালিকা</strong>
+              <div class="donation-note">💾 তথ্য এই ব্রাউজারের LocalStorage-এ সংরক্ষিত হবে।</div>
+            </div>
+            <div class="toolbar-actions">
+              <button class="toolbar-btn pdf" id="printDonationPdf" type="button">🖨️ PDF রিপোর্ট / Print</button>
+              <button class="toolbar-btn" id="exportJson" type="button">⬇️ Backup</button>
+              <button class="toolbar-btn danger" id="clearDonations" type="button">🗑️ সব মুছুন</button>
+            </div>
+          </div>
+
+          <div class="donation-table-wrap">
+            <table class="donation-table">
+              <thead>
+                <tr>
+                  <th>ক্রম</th>
+                  <th>দাতার নাম</th>
+                  <th>পরিমাণ</th>
+                  <th>মাধ্যম</th>
+                  <th>তারিখ ও সময়</th>
+                  <th>অ্যাকশন</th>
+                </tr>
+              </thead>
+              <tbody id="donationTableBody"></tbody>
+            </table>
+            <div class="empty-donations" id="emptyDonations">এখনও কোনো অনুদান যোগ করা হয়নি।</div>
+          </div>
+          <p class="donation-note">⚠️ LocalStorage ব্যবহারের কারণে এই হিসাব একই ব্রাউজার/ডিভাইসে থাকবে; অন্য মানুষের ফোনে স্বয়ংক্রিয়ভাবে দেখা যাবে না।</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="committee" id="committee">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">আমাদের পরিবার</div>
+          <h2>পূজা কমিটি</h2>
+          <p>যাঁদের পরিশ্রম ও ভালোবাসায় উৎসব সুন্দরভাবে সম্পন্ন হয়।</p>
+        </div>
+
+        <div class="members">
+          <div class="member"><div class="avatar">স</div><h3>শ্রী অমল মাহাতো</h3><p>সভাপতি</p></div>
+          <div class="member"><div class="avatar">ব</div><h3>শ্রী বিপ্লব মাহাতো</h3><p>সম্পাদক</p></div>
+          <div class="member"><div class="avatar">র</div><h3>শ্রী রাজেশ সাঁতপতি</h3><p>সাংস্কৃতিক সম্পাদক</p></div>
+          <div class="member"><div class="avatar">অ</div><h3>শ্রী অরুণ মাহাতো</h3><p>কোষাধ্যক্ষ</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">যোগাযোগ করুন</div>
+          <h2>আমাদের সঙ্গে যোগাযোগ</h2>
+          <p>পূজা, সাংস্কৃতিক অনুষ্ঠান, অনুদান বা সহযোগিতা সম্পর্কে জানতে যোগাযোগ করুন।</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div><h3>ঠিকানা</h3><p>হিড়বাঁধ, বাঁকুড়া, পশ্চিমবঙ্গ — আপনার পূজা মণ্ডপের সম্পূর্ণ ঠিকানা এখানে দিন।</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div><h3>ফোন</h3><p>+91 90000 00000<br>+91 90000 00001</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div><h3>ই-মেইল</h3><p>hirbandhdurgapuja@gmail.com</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕘</div>
+              <div><h3>যোগাযোগের সময়</h3><p>সকাল ১০টা – রাত ৮টা</p></div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <form id="contactForm">
+              <div class="form-grid">
+                <label>আপনার নাম
+                  <input required type="text" placeholder="নাম লিখুন">
+                </label>
+                <label>মোবাইল নম্বর
+                  <input required type="tel" placeholder="মোবাইল নম্বর">
+                </label>
+                <label class="full">ই-মেইল
+                  <input type="email" placeholder="example@email.com">
+                </label>
+                <label class="full">বার্তা
+                  <textarea required placeholder="আপনার বার্তা লিখুন..."></textarea>
+                </label>
+                <div class="full">
+                  <button class="submit" type="submit">বার্তা পাঠান →</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>হিড়বাঁধ দুর্গাপূজা</h3>
+        <p>ঐতিহ্য, সংস্কৃতি, ভক্তি ও সম্প্রীতির বন্ধনে আমাদের শারদোৎসব।</p>
+      </div>
+      <div>
+        <h3>দ্রুত লিংক</h3>
+        <ul>
+          <li><a href="#about">ইতিহাস</a></li>
+          <li><a href="#program">অনুষ্ঠান</a></li>
+          <li><a href="#gallery">গ্যালারি</a></li>
+          <li><a href="#donate">অনুদান</a></li>
+          <li><a href="#donationManager">অনুদান হিসাব</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>সোশ্যাল</h3>
+        <ul>
+          <li><a href="#" onclick="return false;">Facebook</a></li>
+          <li><a href="#" onclick="return false;">Instagram</a></li>
+          <li><a href="#" onclick="return false;">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> হিড়বাঁধ দুর্গাপূজা কমিটি • সর্বস্বত্ব সংরক্ষিত</div>
+  </footer>
+
+  <div class="modal" id="imageModal">
+    <button id="closeModal" aria-label="বন্ধ করুন">×</button>
+    <img id="modalImage" src="" alt="গ্যালারি ছবি">
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+
+
+    // Hero banner fallback: keeps the design intact if the external image is unavailable.
+    const hero = document.querySelector(".hero");
+    const heroImage = new Image();
+    heroImage.src = "https://images.unsplash.com/photo-1603396343935-6c5a2a4f1c3d?auto=format&fit=crop&w=2000&q=88";
+    heroImage.onerror = () => {
+      hero.style.backgroundImage =
+        "linear-gradient(90deg,rgba(45,7,14,.82),rgba(96,16,29,.5),rgba(40,9,11,.38)), radial-gradient(circle at 50% 35%, #d89b35 0 8%, #8f1730 24%, #3b111b 65%)";
+    };
+    const menuBtn = document.getElementById("menuBtn");
+    const navList = document.getElementById("navList");
+
+    menuBtn.addEventListener("click", () => navList.classList.toggle("active"));
+    document.querySelectorAll("#navList a").forEach(a => {
+      a.addEventListener("click", () => navList.classList.remove("active"));
+    });
+
+    const toast = document.getElementById("toast");
+    function showToast(message){
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2500);
+    }
+
+    document.getElementById("copyUpi").addEventListener("click", async () => {
+      const value = document.getElementById("upi").textContent.trim();
+      try {
+        await navigator.clipboard.writeText(value);
+        showToast("UPI ID কপি হয়েছে ✓");
+      } catch {
+        showToast("UPI ID: " + value);
+      }
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", e => {
+      e.preventDefault();
+      showToast("ধন্যবাদ! আপনার বার্তা গ্রহণ করা হয়েছে।");
+      e.target.reset();
+    });
+
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+
+    document.querySelectorAll(".gallery-item img").forEach(img => {
+      img.addEventListener("click", () => {
+        modalImage.src = img.src;
+        modal.classList.add("open");
+      });
+    });
+
+    function closeGallery(){
+      modal.classList.remove("open");
+      modalImage.src = "";
+    }
+    document.getElementById("closeModal").addEventListener("click", closeGallery);
+    modal.addEventListener("click", e => { if(e.target === modal) closeGallery(); });
+    document.addEventListener("keydown", e => { if(e.key === "Escape") closeGallery(); });
+
+
+    /* =========================
+       Donation Collection System
+       ========================= */
+    const DONATION_STORAGE_KEY = "hirbandh_donation_records_v1";
+    let donations = [];
+    try {
+      const stored = JSON.parse(localStorage.getItem(DONATION_STORAGE_KEY) || "[]");
+      donations = Array.isArray(stored) ? stored : [];
+    } catch {
+      donations = [];
+      localStorage.removeItem(DONATION_STORAGE_KEY);
+    }
+    let editingDonationId = null;
+
+    const donationForm = document.getElementById("donationForm");
+    const donationManagerCard = document.getElementById("donationManagerCard");
+    const donorNameInput = document.getElementById("donorName");
+    const donationAmountInput = document.getElementById("donationAmount");
+    const paymentMethodInput = document.getElementById("paymentMethod");
+    const donationDateTimeInput = document.getElementById("donationDateTime");
+    const donationSubmit = document.getElementById("donationSubmit");
+    const cancelEditBtn = document.getElementById("cancelEdit");
+    const donationTableBody = document.getElementById("donationTableBody");
+    const emptyDonations = document.getElementById("emptyDonations");
+
+    function saveDonations(){
+      localStorage.setItem(DONATION_STORAGE_KEY, JSON.stringify(donations));
+    }
+
+    function setCurrentDateTime(){
+      const now = new Date();
+      const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+      donationDateTimeInput.value = local.toISOString().slice(0,16);
+    }
+
+    function formatMoney(amount){
+      return "₹" + Number(amount).toLocaleString("en-IN", {minimumFractionDigits:2, maximumFractionDigits:2});
+    }
+
+    function formatDateTime(value){
+      const d = new Date(value);
+      if(Number.isNaN(d.getTime())) return value || "-";
+      return d.toLocaleString("en-IN", {
+        day:"2-digit", month:"2-digit", year:"numeric",
+        hour:"2-digit", minute:"2-digit", hour12:true
+      });
+    }
+
+    function escapeHtml(value){
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+      }[char]));
+    }
+
+    function renderDonations(){
+      const sorted = [...donations].sort((a,b) => new Date(b.dateTime) - new Date(a.dateTime));
+      donationTableBody.innerHTML = "";
+
+      if(!sorted.length){
+        emptyDonations.style.display = "block";
+      }else{
+        emptyDonations.style.display = "none";
+        sorted.forEach((item,index) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td><strong>${escapeHtml(item.name)}</strong></td>
+            <td><strong>${formatMoney(item.amount)}</strong></td>
+            <td><span class="method-badge ${item.method === "UPI" ? "method-upi" : "method-cash"}">${escapeHtml(item.method)}</span></td>
+            <td>${escapeHtml(formatDateTime(item.dateTime))}</td>
+            <td>
+              <button class="action-btn edit-btn" type="button" data-action="edit" data-id="${item.id}">✏️ Edit</button>
+              <button class="action-btn delete-btn" type="button" data-action="delete" data-id="${item.id}">🗑️ Delete</button>
+            </td>`;
+          donationTableBody.appendChild(tr);
+        });
+      }
+
+      const total = donations.reduce((sum,item) => sum + Number(item.amount || 0), 0);
+      const upi = donations.filter(item => item.method === "UPI").reduce((sum,item) => sum + Number(item.amount || 0), 0);
+      const cash = donations.filter(item => item.method === "Cash").reduce((sum,item) => sum + Number(item.amount || 0), 0);
+      document.getElementById("totalCollection").textContent = formatMoney(total);
+      document.getElementById("totalDonations").textContent = donations.length;
+      document.getElementById("upiCollection").textContent = formatMoney(upi);
+      const cashCollection = document.getElementById("cashCollection");
+      if(cashCollection) cashCollection.textContent = formatMoney(cash);
+    }
+
+    function resetDonationForm(){
+      donationForm.reset();
+      paymentMethodInput.value = "UPI";
+      setCurrentDateTime();
+      editingDonationId = null;
+      donationManagerCard.classList.remove("editing");
+      donationSubmit.textContent = "➕ অনুদান যোগ করুন";
+    }
+
+    donationForm.addEventListener("submit", e => {
+      e.preventDefault();
+
+      const name = donorNameInput.value.trim();
+      const amount = Number(donationAmountInput.value);
+      const method = paymentMethodInput.value;
+      const dateTime = donationDateTimeInput.value;
+
+      if(!name || !Number.isFinite(amount) || amount <= 0 || !dateTime){
+        showToast("সব তথ্য সঠিকভাবে পূরণ করুন।");
+        return;
+      }
+
+      if(editingDonationId){
+        const index = donations.findIndex(item => item.id === editingDonationId);
+        if(index !== -1){
+          donations[index] = {...donations[index], name, amount, method, dateTime};
+          showToast("অনুদানের তথ্য আপডেট হয়েছে ✓");
+        }
+      }else{
+        donations.push({
+          id: Date.now().toString(36) + Math.random().toString(36).slice(2,8),
+          name, amount, method, dateTime,
+          createdAt: new Date().toISOString()
+        });
+        showToast("অনুদান সফলভাবে যোগ হয়েছে ✓");
+      }
+
+      saveDonations();
+      renderDonations();
+      resetDonationForm();
+    });
+
+    cancelEditBtn.addEventListener("click", resetDonationForm);
+
+    donationTableBody.addEventListener("click", e => {
+      const btn = e.target.closest("button[data-action]");
+      if(!btn) return;
+
+      const id = btn.dataset.id;
+      const item = donations.find(d => d.id === id);
+      if(!item) return;
+
+      if(btn.dataset.action === "edit"){
+        editingDonationId = id;
+        donorNameInput.value = item.name;
+        donationAmountInput.value = item.amount;
+        paymentMethodInput.value = item.method;
+        donationDateTimeInput.value = item.dateTime;
+        donationManagerCard.classList.add("editing");
+        donationSubmit.textContent = "💾 তথ্য আপডেট করুন";
+        document.getElementById("donationManager").scrollIntoView({behavior:"smooth", block:"start"});
+        donorNameInput.focus();
+      }
+
+      if(btn.dataset.action === "delete"){
+        if(confirm(`"${item.name}"-এর ${formatMoney(item.amount)} অনুদানটি মুছে ফেলবেন?`)){
+          donations = donations.filter(d => d.id !== id);
+          saveDonations();
+          renderDonations();
+          showToast("অনুদান মুছে ফেলা হয়েছে।");
+        }
+      }
+    });
+
+    document.getElementById("clearDonations").addEventListener("click", () => {
+      if(!donations.length){
+        showToast("মুছে ফেলার মতো কোনো অনুদান নেই।");
+        return;
+      }
+      if(confirm("সতর্কতা: সব অনুদানের হিসাব এই ব্রাউজার থেকে মুছে যাবে। আপনি কি নিশ্চিত?")){
+        donations = [];
+        saveDonations();
+        renderDonations();
+        resetDonationForm();
+        showToast("সব অনুদানের হিসাব মুছে ফেলা হয়েছে।");
+      }
+    });
+
+    document.getElementById("exportJson").addEventListener("click", () => {
+      if(!donations.length){
+        showToast("Backup করার মতো কোনো তথ্য নেই।");
+        return;
+      }
+      const blob = new Blob([JSON.stringify(donations, null, 2)], {type:"application/json"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `hirbandh-donation-backup-${new Date().toISOString().slice(0,10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast("Donation backup ডাউনলোড হয়েছে ✓");
+    });
+
+    function printDonationReport(){
+      const sorted = [...donations].sort((a,b) => new Date(a.dateTime) - new Date(b.dateTime));
+      const total = sorted.reduce((sum,item) => sum + Number(item.amount || 0), 0);
+      const upi = sorted.filter(item => item.method === "UPI").reduce((sum,item) => sum + Number(item.amount || 0), 0);
+      const cash = sorted.filter(item => item.method === "Cash").reduce((sum,item) => sum + Number(item.amount || 0), 0);
+      const reportDate = new Date().toLocaleString("bn-IN");
+
+      const rows = sorted.map((item,index) => `
+        <tr>
+          <td>${index+1}</td>
+          <td>${escapeHtml(item.name)}</td>
+          <td>₹${Number(item.amount).toLocaleString("en-IN",{minimumFractionDigits:2})}</td>
+          <td>${escapeHtml(item.method)}</td>
+          <td>${escapeHtml(formatDateTime(item.dateTime))}</td>
+        </tr>`).join("");
+
+      const reportWindow = window.open("", "_blank", "width=1000,height=800");
+      if(!reportWindow){
+        showToast("Popup blocked হয়েছে। Browser popup allow করে আবার চেষ্টা করুন।");
+        return;
+      }
+
+      reportWindow.document.write(`<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>হিড়বাঁধ দুর্গাপূজা — অনুদান হিসাব</title>
+<style>
+  @page{size:A4;margin:14mm}
+  *{box-sizing:border-box}
+  body{font-family:"Noto Sans Bengali","Nirmala UI","Segoe UI",sans-serif;color:#2f211d;margin:0}
+  .head{text-align:center;border-bottom:2px solid #9e1b32;padding-bottom:14px;margin-bottom:18px}
+  h1{margin:0;color:#6d1225;font-size:27px}
+  h2{margin:4px 0;font-size:18px}
+  .meta{color:#666;font-size:12px}
+  .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+  .box{border:1px solid #dfd2c6;border-radius:8px;padding:10px;text-align:center}
+  .box strong{display:block;font-size:20px;color:#9e1b32}
+  .box span{font-size:11px;color:#666}
+  table{width:100%;border-collapse:collapse;font-size:11px}
+  th{background:#6d1225;color:#fff;padding:8px;text-align:left}
+  td{border:1px solid #ddd;padding:7px}
+  tfoot td{font-weight:bold;background:#fff4e5}
+  .footer{margin-top:22px;font-size:10px;color:#777;text-align:center}
+  @media print{.no-print{display:none}}
+</style>
+</head>
+<body>
+  <div class="head">
+    <h1>হিড়বাঁধ দুর্গাপূজা</h1>
+    <h2>অনুদান সংগ্রহের হিসাব</h2>
+    <div class="meta">রিপোর্ট তৈরি: ${escapeHtml(reportDate)}</div>
+  </div>
+  <div class="summary">
+    <div class="box"><strong>₹${total.toLocaleString("en-IN",{minimumFractionDigits:2})}</strong><span>মোট সংগ্রহ</span></div>
+    <div class="box"><strong>₹${upi.toLocaleString("en-IN",{minimumFractionDigits:2})}</strong><span>UPI সংগ্রহ</span></div>
+    <div class="box"><strong>₹${cash.toLocaleString("en-IN",{minimumFractionDigits:2})}</strong><span>Cash সংগ্রহ</span></div>
+  </div>
+  <table>
+    <thead><tr><th>ক্রম</th><th>দাতার নাম</th><th>পরিমাণ</th><th>মাধ্যম</th><th>তারিখ ও সময়</th></tr></thead>
+    <tbody>${rows || '<tr><td colspan="5" style="text-align:center">কোনো অনুদান নেই</td></tr>'}</tbody>
+    <tfoot><tr><td colspan="2">সর্বমোট</td><td>₹${total.toLocaleString("en-IN",{minimumFractionDigits:2})}</td><td colspan="2">${sorted.length}টি অনুদান</td></tr></tfoot>
+  </table>
+  <div class="footer">হিড়বাঁধ দুর্গাপূজা কমিটি • এই রিপোর্ট LocalStorage-এ সংরক্ষিত হিসাবের ভিত্তিতে তৈরি</div>
+  <script>window.onload=()=>setTimeout(()=>window.print(),300);<\/script>
+</body>
+</html>`)
+      reportWindow.document.close();
+    }
+
+    document.getElementById("printDonationPdf").addEventListener("click", printDonationReport);
+    setCurrentDateTime();
+    renderDonations();
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
